@@ -15,4 +15,4 @@ jobs:
       - name: Run Super-Linter
         env: 
           secret: ${{ secrets.test }}
-        run: echo $secret
+        run: echo "$secret is invisible"
