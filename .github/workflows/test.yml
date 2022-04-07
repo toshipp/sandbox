@@ -20,7 +20,7 @@ jobs:
           path: |
             ~/go/pkg/mod
             ~/.cache/go-build
-          key: go-1
+          key: go-2
           restore-keys: |
             go-
       - run: ls -R ~/go/pkg/mod ~/.cache/go-build || true
