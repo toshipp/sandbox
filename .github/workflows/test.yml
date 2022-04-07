@@ -20,9 +20,10 @@ jobs:
           path: |
             ~/go/pkg/mod
             ~/.cache/go-build
-          key: go-${{ hashFiles('go.sum') }}
+          key: go-1
           restore-keys: |
             go-
-      - run: ls ~/go/pkg/mod ~/.cache/go-build || true
+      - run: ls -R ~/go/pkg/mod ~/.cache/go-build || true
       - run: go env
       - run: go build
+      - run: GOBIN=$(pwd)/bin go install honnef.co/go/tools/cmd/staticcheck@latest
