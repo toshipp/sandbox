@@ -24,3 +24,5 @@ jobs:
             -t "[$(date '+%Y/%m')] サービスリリース" \
             -l periodic \
             -F $body
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
