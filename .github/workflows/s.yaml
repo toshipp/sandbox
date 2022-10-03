@@ -1,4 +1,4 @@
-name: Add an issue to suggest new service release.
+name: schedule test
 
 on:
   schedule:
